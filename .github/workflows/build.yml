@@ -2,11 +2,7 @@ on: push
 jobs:
   build-node:
     runs-on: ubuntu-latest
-    container: node:16
+    container: php
     steps:
-      - run: node --version
-      - run: npm --version
-      - uses: actions/checkout@v3
-      - run: node app.js
-
-
+      - run: php -v
+      
