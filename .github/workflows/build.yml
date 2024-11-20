@@ -1,8 +1,11 @@
 on: push
 jobs:
-  build-node:
+  build-python:
     runs-on: ubuntu-latest
-    container: php
+    container:
+      image: python:3.9
     steps:
-      - run: php -v
+      - run: python --version
+      - run: pip --version
+
       
